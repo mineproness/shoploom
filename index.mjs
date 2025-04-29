@@ -1,11 +1,11 @@
 // All Package Imports
 import express from 'express'
 import cors from 'cors'
-import mongodb from './lib/connect.mjs'
-import signupvalidation from './lib/signup-validation.mjs'
-import loginvalidation from './lib/login-validation.mjs'
+import mongodb from './connect.mjs'
+import signupvalidation from './signup-validation.mjs'
+import loginvalidation from './login-validation.mjs'
 import fs from 'fs'
-import productget from './lib/product-get.mjs'
+import productget from './product-get.mjs'
 import dotenv from 'dotenv'
 dotenv.config()
 // Connect To mongo DB
