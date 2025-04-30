@@ -2,7 +2,10 @@ import { MongoClient } from "mongodb";
 import dotenv from 'dotenv'
 dotenv.config()
 
-const client = new MongoClient(process.env.MONGO)
+const client = new MongoClient(process.env.MONGO , {
+    tls: true,
+  tlsAllowInvalidCertificates: false,
+})
 client.connect()
 console.log(client.db('shoploom'))
 
