@@ -1,9 +1,9 @@
 import { MongoClient } from "mongodb";
 import dotenv from 'dotenv'
 dotenv.config()
-console.log("connect On mongodb+srv://proplayerhacker20:Mineproness2023@cluster0.x4dcstd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
-const client = new MongoClient("mongodb+srv://proplayerhacker20:Mineproness2023@cluster0.x4dcstd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+const client = new MongoClient(process.env.MONGO)
+client.connect()
+console.log(client.db('shoploom'))
 
-
-export default await client.connect()
+export default await client
